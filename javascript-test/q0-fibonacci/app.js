@@ -27,3 +27,34 @@ var __fibnum = __fib.take(num);
 
 console.log(__fibnum.toArray());//calcurate and output
 */
+
+// How about this!
+
+var generateFib;
+
+generateFib = function(list, limit) {
+  list.push(list[list.length - 1] + list[list.length - 2]);
+  if (list.length >= limit) {
+    return console.log(list);
+  } else {
+    return generateFib(list, limit);
+  }
+};
+
+generateFib([1, 2], 10);
+
+// in coffee script
+generateFib = (list, limit) ->
+  list.push(list[list.length - 1] + list[list.length - 2])
+  if list.length >= limit then console.log(list) else generateFib(list, limit)
+
+generateFib([1, 2], 10)
+
+// in ruby
+
+def generate_fib(list, limit)
+  list << list[-1] + list[-2]
+  list.size >= limit ? list : generate_fib(list, limit)
+end
+
+generate_fig([1, 2], 10)
