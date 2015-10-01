@@ -43,6 +43,7 @@ generateFib = function(list, limit) {
 
 generateFib([1, 2], 10);
 
+
 // in coffee script
 generateFib = (list, limit) ->
   list.push(list[list.length - 1] + list[list.length - 2])
@@ -50,11 +51,11 @@ generateFib = (list, limit) ->
 
 generateFib([1, 2], 10)
 
-// in ruby
 
+// in ruby
 def generate_fib(list, limit)
   list << list[-1] + list[-2]
   list.size >= limit ? list : generate_fib(list, limit)
 end
 
-generate_fig([1, 2], 10)
+generate_fib([1, 2], 10)
